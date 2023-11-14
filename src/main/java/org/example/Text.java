@@ -23,8 +23,6 @@ public class Text {
             StringBuffer sbSentence = new StringBuffer(text.substring(pos1, pos2));
             Sentence sentence = new Sentence(sbSentence);
             sentences.add(sentence);
-            System.out.println();
-            sentence.show();
         }
     }
 

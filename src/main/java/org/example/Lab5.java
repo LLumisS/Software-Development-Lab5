@@ -12,16 +12,22 @@ public class Lab5 {
                 System.out.println("Enter text:");
                 StringBuffer sbText = new StringBuffer(scanner.nextLine());
 
-                if (sbText.isEmpty())
-                    throw new Exception();
+                if (sbText.isEmpty()) {
+                    throw new IllegalArgumentException();
+                }
 
                 Text text = new Text(sbText);
+                int result = Calculate(text);
 
-                System.out.println("\nResult: " + Calculate(text) + "\n");
+                if (result == 0) {
+                    throw new IllegalArgumentException();
+                }
+
+                System.out.println("\nResult: " + result + "\n");
                 scanner.close();
                 break;
-            } catch (Exception e) {
-                System.out.println("Error: Input Mismatch.\n");
+            } catch (IllegalArgumentException e) {
+                System.out.println("\nError: Input Mismatch.\n");
             }
         }
     }
