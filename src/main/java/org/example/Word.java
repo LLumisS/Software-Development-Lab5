@@ -7,14 +7,6 @@ public class Word extends SentencePart {
 
     Word(StringBuffer word) {
         for (int i = 0; i < word.length(); i++) {
-            char currentChar = word.charAt(i);
-            if (Character.isUpperCase(currentChar)) {
-                char convertedChar = Character.toLowerCase(currentChar);
-                word.setCharAt(i, convertedChar);
-            }
-        }
-
-        for (int i = 0; i < word.length(); i++) {
             char ch = word.charAt(i);
             this.word.add(ch);
         }
