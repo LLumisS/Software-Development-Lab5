@@ -3,13 +3,13 @@ package org.example;
 import java.util.ArrayList;
 
 public class Word extends SentencePart {
-    private final ArrayList<Character> word = new ArrayList<>();
+    private final ArrayList<Letter> word = new ArrayList<>();
 
     // Word constructor which takes StringBuffer word
     Word(StringBuffer word) {
         for (int i = 0; i < word.length(); i++) {
             char ch = word.charAt(i);
-            this.word.add(ch);
+            this.word.add(new Letter(ch));
         }
     }
 
@@ -18,7 +18,7 @@ public class Word extends SentencePart {
     }
 
     public char getLetter(int n) {
-        return word.get(n);
+        return word.get(n).getLetter();
     }
 
     // if the getted word is equal to the base word
@@ -34,8 +34,8 @@ public class Word extends SentencePart {
     }
 
     public void show() {
-        for (Character character : word) {
-            System.out.print(character.charValue());
+        for (Letter letter : word) {
+            System.out.print(letter.getLetter());
         }
     }
 }
