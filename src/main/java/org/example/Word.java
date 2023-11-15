@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Word extends SentencePart {
     private final ArrayList<Character> word = new ArrayList<>();
 
+    // Word constructor which takes StringBuffer word
     Word(StringBuffer word) {
         for (int i = 0; i < word.length(); i++) {
             char ch = word.charAt(i);
@@ -20,6 +21,7 @@ public class Word extends SentencePart {
         return word.get(n);
     }
 
+    // if the getted word is equal to the base word
     public boolean equals(Word word) {
         if (this.length() != word.length())
             return false;
