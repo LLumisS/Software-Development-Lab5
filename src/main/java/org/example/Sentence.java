@@ -37,10 +37,10 @@ public class Sentence {
         }
     }
 
+    // get only the Word elements
     public ArrayList<Word> getWords() {
         ArrayList<Word> result = new ArrayList<>();
-
-        // get the Word elements
+        
         for (SentencePart element : elements) {
             if (element instanceof Word current) {
                 result.add(current);

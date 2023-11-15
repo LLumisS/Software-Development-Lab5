@@ -17,6 +17,7 @@ public class Word extends SentencePart {
         return word.size();
     }
 
+    // get letter by its number
     public char getLetter(int n) {
         return word.get(n).getLetter();
     }
